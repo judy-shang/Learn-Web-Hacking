@@ -293,6 +293,29 @@ objdump -d farm.o | less
 
 
 
+## L4(Cache Lab): 实现一个缓存系统来加速计算
+
+### 预备知识
+
+#### **GDB 命令**
+
+- `gdbtui <binary>`
+- `layout split`
+
+![img](E:\Design Pattern\Learn-Web-Hacking\learning note\CSAPP LAB笔记.assets\14557338869148.jpg)
+
+**valgrind**
+
+可以用来查找
+
+- 内存泄露
+- 其他内存错误
+- 内存损害
+
+使用 `gcc -g` 可以列出内存泄露的具体行数
+
+使用 `valgrind --leak-check=full` 可以查看全部详细信息
+
 
 
 
