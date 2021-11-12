@@ -1509,7 +1509,7 @@ TLB 中的数据为
 
 先来看看一个简单的使用 `malloc` 和 `free` 的例子
 
-```
+```c++
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -1531,8 +1531,6 @@ void foo(int n) {
     free(p);
 }
 ```
-
-复制
 
 为了讲述方便，我们做如下假设：
 
@@ -1615,14 +1613,12 @@ R0,R1,...,Rk,...,Rn−1R0,R1,...,Rk,...,Rn−1
 
 所谓垃圾回收，就是我们不再需要显式释放所申请内存空间了，例如：
 
-```
+```c++
 void foo() {
     int *p = malloc(128);
     return; /* p block is now garbage*/
 }
 ```
-
-复制
 
 这种机制在许多动态语言中都有实现：Python, Ruby, Java, Perl, ML, Lisp, Mathematica。C 和 C++ 中也有类似的变种，但是需要注意的是，是不可能回收所有的垃圾的。
 
@@ -1838,3 +1834,11 @@ foo() {
 有了前面的基础，简要介绍了动态内存分配的基本概念和管理动态内存分配的三种算法。最后提及了垃圾回收的基本原理和内存使用中常见的错误。
 
 尤其是动态内存分配和垃圾回收的部分，因为篇幅限制说得比较简单，一定要对照书本进行阅读和理解。
+
+
+
+
+
+[全虚拟化和半虚拟化的区别 cpu的ring0 ring1又是什么概念?](https://www.cnblogs.com/xusongwei/archive/2012/07/30/2615592.html)
+
+Ring0-Ring3层到底是个什么东西 https://juejin.cn/post/6844904071917207566 
